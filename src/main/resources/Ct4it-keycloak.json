@@ -1,0 +1,10 @@
+{
+  "realm": "ct4it",
+  "auth-server-url": "https://keycloak.it-control-tower-160619-f72ef11f3ab089a8c677044eb28292cd-0000.sjc03.containers.appdomain.cloud/auth/",
+  "ssl-required": "external",
+  "resource": "metlife",
+  "public-client": true,
+  "verify-token-audience": true,
+  "use-resource-role-mappings": true,
+  "confidential-port": 0
+}
