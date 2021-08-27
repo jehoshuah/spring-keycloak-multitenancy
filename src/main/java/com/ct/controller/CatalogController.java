@@ -21,29 +21,23 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ct.repository.UserRealmsRepository;
+import com.ct.repository.RealmsRepository;
 
 @RestController
 public class CatalogController {
 
 	@Autowired
-	UserRealmsRepository repo;
+	RealmsRepository repo;
 	
 	@GetMapping("/tenant/{realm}/catalog")
 	public void listCatalogBranch1(@PathVariable("realm") String realm, @RequestParam("redirectURL") String redirectURL, HttpServletResponse response) throws IOException {
 		response.sendRedirect(redirectURL);
 	}
-
-//	@CrossOrigin
-//	@GetMapping(value = "/getUserRealms")
-//	public ResponseEntity<?> getAllUserRealms(@RequestParam("user") String user) throws Exception {
-//		return ResponseEntity.ok(repo.findByUser(user));
-//	}
 	
-//	@GetMapping("/tenant/branch2/catalog")
-//	public String listCatalogBranch2() {
-//		return getUserInfo();
-//	}
+	@GetMapping("/tenant/{realm}/get-all")
+	public ResponseEntity<?> getAllRealms(@PathVariable("realm") String realm) throws Exception {
+		return ResponseEntity.ok(repo.findAll());
+	}
 
 	@SuppressWarnings("unchecked")
 	private String getUserInfo() {
