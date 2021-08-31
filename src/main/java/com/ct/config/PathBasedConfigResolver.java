@@ -49,6 +49,9 @@ public class PathBasedConfigResolver implements KeycloakConfigResolver {
 				System.out.println("===================NEW REALM==================");
 				try {
 					jsonInString = KeycloakRealm.createKeycloakJSON(realm).toString();
+					System.out.println("==========");
+					System.out.println(jsonInString);
+					System.out.println("==========");
 					repo.save(new REALMS(realm, jsonInString));
 					is = new ByteArrayInputStream(jsonInString.getBytes());
 				} catch (IOException e) {
@@ -63,12 +66,11 @@ public class PathBasedConfigResolver implements KeycloakConfigResolver {
 			}
 			cache.put(realm, KeycloakDeploymentBuilder.build(is));
 		}
-
+		
 		return cache.get(realm);
 	}
 
 	static void setAdapterConfig(AdapterConfig adapterConfig) {
 		PathBasedConfigResolver.adapterConfig = adapterConfig;
 	}
-
 }
