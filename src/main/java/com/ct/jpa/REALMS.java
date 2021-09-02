@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "REALMS", schema = "CONTROLTOWER_DEMO")
+@Table(name = "REALMS", schema = "DABATASE")
 
 public class REALMS implements Serializable {
 	private static final long serialVersionUID = -8091879091924046844L;
