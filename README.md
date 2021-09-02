@@ -1,3 +1,15 @@
+Code majorly taken from - https://github.com/czetsuya/spring-keycloak-multi-tenant
+
+The changes I have made is to:
+- store the Keycloak jsons in DB instead of preconfigured json files.
+- redirect to a UI app(I have used ReactJS) on the successful login
+- check if the given realm is already created or new and process to create on in DB accordingly.
+
+I'll also be uploading the UI(ReactJS) side of the application in a while. 
+Contact me at dasarijoshua@gmail.com for more info.
+
+-----------------------------------------------------------------------------------------------------------------------------**The below is the content from the original author.**
+-----------------------------------------------------------------------------------------------------------------------------
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 **Help me build more open-source projects by becoming my sponsor.*
