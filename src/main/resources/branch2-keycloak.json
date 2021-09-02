@@ -1,8 +1,0 @@
-{
-  "realm": "branch2",
-  "auth-server-url": "https://keycloak.it-control-tower-160619-f72ef11f3ab089a8c677044eb28292cd-0000.sjc03.containers.appdomain.cloud/auth/",
-  "ssl-required": "external",
-  "resource": "web",
-  "public-client": true,
-  "confidential-port": 0
-}

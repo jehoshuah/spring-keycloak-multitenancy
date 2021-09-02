@@ -80,9 +80,9 @@ public class KeycloakRealm {
 		jsonObject.put("realm", realm);
 		
 		//TODO: for DEV
-		jsonObject.put("auth-server-url", "https://keycloak.it-control-tower-160619-f72ef11f3ab089a8c677044eb28292cd-0000.sjc03.containers.appdomain.cloud/auth/");
+//		jsonObject.put("auth-server-url", "https://keycloak.it-control-tower-160619-f72ef11f3ab089a8c677044eb28292cd-0000.sjc03.containers.appdomain.cloud/auth/");
 		//TODO: for Local
-//		jsonObject.put("auth-server-url", "http://localhost:8080/auth/");
+		jsonObject.put("auth-server-url", "http://localhost:8080/auth/");
 
 		jsonObject.put("ssl-required", "external");
 		jsonObject.put("resource", "web");

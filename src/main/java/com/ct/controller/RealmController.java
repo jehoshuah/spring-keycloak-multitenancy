@@ -23,12 +23,6 @@ public class RealmController {
 	@Autowired
 	RealmsRepository repo;
 
-//	@CrossOrigin
-//	@GetMapping("/tenant/{realm}/get-all")
-//	public ResponseEntity<?> getAllRealms(@PathVariable("realm") String realm) throws Exception {
-//		return ResponseEntity.ok(repo.findAll());
-//	}
-
 	@CrossOrigin
 	@GetMapping("/tenant/{realm}/get")
 	public ResponseEntity<?> getAllUserRealms(@PathVariable("realm") String realm) throws Exception {
